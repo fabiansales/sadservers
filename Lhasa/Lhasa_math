@@ -1,0 +1,8 @@
+con AWK:
+
+awk  '{total += $2} END { printf "%.2f",  total }' list
+awk '{total =+ $2}  END { printf "%.2f",  total }' /home/admin/scores.txt
+
+con bash+bc:
+awk '{print $2}' list | paste -sd+ | bc
+
