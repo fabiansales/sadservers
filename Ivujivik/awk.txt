@@ -1,0 +1,1 @@
+awk -F',' '$4 < 100000 && $9 > max_rejected { max_rejected = $9; max_district = $2; population = $4 } END { print "Electoral District Name/Nom de circonscription:", max_district; print "Rejected Ballots/Bulletins:", max_rejected; print "Population:", population }' table_tableau11.csv
